@@ -14,10 +14,14 @@ def rename(dir_name, show_name, s_num, ep_num):
 			file_ext = file[len(file) - 4:len(file):1]
 			file_ext = file_ext.lower()
 			#if show_name in file:
-			if len(temp) == 1:
+			if len(temp) == 1 and len(s_num) == 1:
 				os.rename(os.path.join(subdir, file),os.path.join(subdir, show_name + " - S0" + s_num + "E0" + temp + file_ext))
-			elif len(temp) == 2:
+			elif len(temp) == 2 and len(s_num) == 1:
 				os.rename(os.path.join(subdir, file),os.path.join(subdir, show_name + " - S0" + s_num + "E" + temp + file_ext))
+			elif len(temp) == 1 and len(s_num) == 2:
+				os.rename(os.path.join(subdir, file),os.path.join(subdir, show_name + " - S" + s_num + "E0" + temp + file_ext))
+			elif len(temp) == 2 and len(s_num) == 2:
+				os.rename(os.path.join(subdir, file),os.path.join(subdir, show_name + " - S" + s_num + "E" + temp + file_ext))
 			count+= 1
 			temp = str(count)
 
