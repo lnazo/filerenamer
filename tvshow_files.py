@@ -48,10 +48,10 @@ def quick_sort(array):
 # gets input from user
 def main():
 	print("TV Shows\n")
-	dir_name = input("Enter the full file directory: ")
-	show_name = input("Enter the name of the show: ")
-	s_num = input("Enter the season number: ")
-	ep_num = input("What number do the episodes start from?: ")
+	dir_name = raw_input("Enter the full file directory: ")
+	show_name = raw_input("Enter the name of the show: ")
+	s_num = raw_input("Enter the season number: ")
+	ep_num = raw_input("What number do the episodes start from?: ")
 
 	rename(dir_name, show_name, s_num, ep_num)
 
